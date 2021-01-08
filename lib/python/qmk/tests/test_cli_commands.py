@@ -230,3 +230,8 @@ def test_generate_rgb_breathe_table():
     check_returncode(result)
     assert 'Breathing center: 1.2' in result.stdout
     assert 'Breathing max:    127' in result.stdout
+
+
+def test_generate_api():
+    result = check_subcommand('generate-api', '--dry-run')
+    check_returncode(result)
